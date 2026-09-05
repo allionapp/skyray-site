@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkyRay – Privacy Policy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><span class="brand">SkyRay</span><nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="terms.html">Terms</a></nav></header>
+<main>
+<p class="lang"><a href="privacy.html">English</a><a href="privacy-fa.html">فارسی</a></p>
+<h1>Privacy Policy</h1>
+<p class="muted">Effective 5 September 2026 · Applies to the SkyRay app for iOS and iPadOS, and to future Android releases.</p>
+
+<p class="lead">SkyRay does not collect, store or share any personal data. There are no accounts, no analytics, no advertising and no tracking. Everything you add to the app stays on your device.</p>
+
+<h2>What the app stores on your device</h2>
+<ul>
+<li><strong>Server configurations</strong> you add (links, subscription addresses, names, and latency results).</li>
+<li><strong>Settings</strong> such as routing mode, DNS servers and appearance.</li>
+<li><strong>A connection log</strong> kept only on the device so you can diagnose problems. You can copy or clear it in Settings.</li>
+</ul>
+<p>This data is kept in the app's private storage (an iOS App Group shared only with the app's own network extension). It is never sent to us. Deleting the app deletes it. If you use the optional backup export, the file you create contains your server credentials – keep it private.</p>
+
+<h2>Network connections the app makes</h2>
+<table>
+<tr><th>Destination</th><th>Why</th><th>What is sent</th></tr>
+<tr><td>The proxy/VPN servers you add</td><td>To carry your traffic when you connect, and to measure latency when you ask for it</td><td>Your internet traffic, encrypted by the protocol of that server. SkyRay does not log or inspect it.</td></tr>
+<tr><td>Subscription URLs you add</td><td>To download and refresh your provider's server list</td><td>A plain HTTP request. Some providers identify you by the token in their URL; that relationship is between you and your provider.</td></tr>
+<tr><td>Latency test URLs (Google <code>generate_204</code>, Cloudflare <code>generate_204</code>)</td><td>To measure how fast a server responds</td><td>An empty request through the server being tested.</td></tr>
+<tr><td>Public IP lookup (<code>api.ipify.org</code>)</td><td>Only when you run the built-in connection self-test</td><td>An empty request; the response shows your exit IP to you only.</td></tr>
+</table>
+<p>SkyRay contacts no server of its own. There is no telemetry, no crash reporting service and no third-party SDK.</p>
+
+<h2>Your provider</h2>
+<p>SkyRay is a client. The servers it connects to are operated by whoever gave you the configuration. That operator can see the traffic that passes through their server, subject to their own privacy policy. Only add links from a provider you trust.</p>
+
+<h2>Device permissions</h2>
+<ul>
+<li><strong>VPN configuration</strong> – required to route traffic through the tunnel. iOS asks for your consent the first time you connect.</li>
+<li><strong>Camera</strong> – only while you scan a QR code. Images are processed on the device and never stored.</li>
+<li><strong>Clipboard</strong> – read only when you tap Paste. The app checks whether the clipboard contains text without reading it, so it can offer the Paste option.</li>
+<li><strong>Siri &amp; Shortcuts</strong> – optional actions to connect or disconnect. No voice or usage data leaves the device.</li>
+</ul>
+
+<h2>Children</h2>
+<p>SkyRay is not directed at children under 13 and collects no data from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be published at this address with a new effective date. Because the app collects nothing, changes are expected to be rare.</p>
+
+<h2>Contact</h2>
+<p>ALLION LLC · <a href="mailto:ehusa86@gmail.com">ehusa86@gmail.com</a> · <a href="support.html">Support</a></p>
+</main>
+<footer>© 2026 ALLION LLC · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></footer>
+</body>
+</html>
