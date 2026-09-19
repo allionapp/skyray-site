@@ -10,7 +10,7 @@
 <main>
 <p class="lang"><a href="privacy.html">English</a><a href="privacy-fa.html">فارسی</a></p>
 <h1>Privacy Policy</h1>
-<p class="muted">Effective 5 September 2026 · Applies to the SkyRay app for iOS and iPadOS, and to future Android releases.</p>
+<p class="muted">Effective 18 September 2026 · Applies to the SkyRay app for iOS, iPadOS and Android.</p>
 
 <p class="lead">SkyRay does not collect, store or share any personal data of its own, and there are no accounts and no analytics. Everything you add to the app stays on your device. The app shows a short ad after you connect, served by Google AdMob &ndash; see &ldquo;Advertising&rdquo; below for what that involves.</p>
 
@@ -33,11 +33,20 @@
 <p>Beyond this, SkyRay contacts no server of its own: there is no telemetry and no crash reporting service. The one third-party SDK in the app is Google AdMob, covered next.</p>
 
 <h2>Advertising</h2>
-<p>After you connect to a server, SkyRay shows one short ad using <strong>Google AdMob</strong>. This is the only advertising or analytics SDK in the app.</p>
+<p>After you connect to a server, SkyRay shows one short ad using <strong>Google AdMob</strong>. This is the only advertising or analytics SDK in the app. Watching it through is what keeps the app free: closing the ad early, or leaving the app while it plays, disconnects the tunnel. If no ad can be loaded at all, your connection is left alone.</p>
 <ul>
 <li><strong>Consent first.</strong> Where required (the EEA, UK and Switzerland), a Google-run consent form asks your preference before any ad is requested. Everywhere, iOS separately asks your permission before the app can use the advertising identifier (IDFA) to personalise ads &ndash; you can decline this (&ldquo;Ask App Not to Track&rdquo;) and still use SkyRay normally; ads keep showing, just less targeted.</li>
 <li><strong>What Google can receive</strong> to serve and measure an ad: your advertising identifier (if permitted), approximate IP-based location, device and app information, and ad interaction data. SkyRay does not send Google anything about the servers you add or your VPN traffic; that stays inside the tunnel.</li>
 <li><strong>Google's own policies</strong> govern how it handles this data: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads">How Google uses information from sites and apps that use its services</a>. You can review or reset your ad personalisation choices for Google at <a href="https://adssettings.google.com">adssettings.google.com</a>, and control the advertising identifier itself in your device's Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking.</li>
+</ul>
+
+<h2>Free WARP</h2>
+<p>Besides the servers you add yourself, SkyRay offers one built-in option: <strong>Free WARP</strong>, which carries your traffic over Cloudflare's WARP service. It is optional; nothing uses it unless you choose it.</p>
+<ul>
+<li><strong>What happens when you turn it on.</strong> The app registers an anonymous device with Cloudflare and keeps the resulting key on your phone. No email, account or payment is involved, and the key never leaves the device. Deleting the app deletes it.</li>
+<li><strong>Where your traffic goes.</strong> Through Cloudflare's network, which can see the traffic passing through it, subject to <a href="https://www.cloudflare.com/application/terms/">Cloudflare's terms of service</a> and <a href="https://www.cloudflare.com/application/privacypolicy/">privacy policy</a>. SkyRay sends Cloudflare nothing about you beyond what carrying that traffic requires.</li>
+<li><strong>What it does not hide.</strong> Cloudflare still records the connection as coming from your own country, so sites that block a country may keep blocking it.</li>
+<li><strong>The engine.</strong> Free WARP is handled by Aether, an open-source WARP client (AGPL-3.0) built into the app. It runs on your device and talks to no one but Cloudflare.</li>
 </ul>
 
 <h2>Your provider</h2>
@@ -45,7 +54,7 @@
 
 <h2>Device permissions</h2>
 <ul>
-<li><strong>VPN configuration</strong> – required to route traffic through the tunnel. iOS asks for your consent the first time you connect.</li>
+<li><strong>VPN configuration</strong> – required to route traffic through the tunnel. Your device asks for your consent the first time you connect.</li>
 <li><strong>Camera</strong> – only while you scan a QR code. Images are processed on the device and never stored.</li>
 <li><strong>Clipboard</strong> – read only when you tap Paste. The app checks whether the clipboard contains text without reading it, so it can offer the Paste option.</li>
 <li><strong>Siri &amp; Shortcuts</strong> – optional actions to connect or disconnect. No voice or usage data leaves the device.</li>
